@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>搜索电影 - 免费亚洲电影</title>
+  <meta name="description" content="免费亚洲电影搜索页，可按关键词、类型、地区、年份和题材筛选高清影片。">
+  <meta name="keywords" content="免费亚洲电影,亚洲电影,热门电影片库,高清电影,在线观看,精选影片">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="免费亚洲电影">
+      <span class="brand__mark">影</span>
+      <span class="brand__name">免费亚洲电影</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="movies-page-1.html">片库</a>
+      <a href="categories.html">分类</a>
+      <a href="ranking.html">排行榜</a>
+      <a href="movie-index.html">影片索引</a>
+    </nav>
+    <form class="header-search" action="search.html" method="get">
+      <input type="search" name="q" placeholder="搜索电影..." aria-label="搜索电影">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="mobile-toggle" type="button" aria-label="打开菜单" data-mobile-toggle>☰</button>
+  </div>
+  <div class="mobile-panel" data-mobile-panel>
+    <form class="mobile-search" action="search.html" method="get">
+      <input type="search" name="q" placeholder="搜索电影..." aria-label="搜索电影">
+      <button type="submit">搜索</button>
+    </form>
+    <a href="index.html">首页</a>
+    <a href="movies-page-1.html">片库</a>
+    <a href="categories.html">分类</a>
+    <a href="ranking.html">排行榜</a>
+    <a href="movie-index.html">影片索引</a>
+  </div>
+</header>
+<main class="page-main">
+  <section class="page-hero page-hero--compact">
+    <div class="container">
+      <p class="eyebrow">搜索筛选</p>
+      <h1>搜索免费亚洲电影</h1>
+      <p>输入片名、地区、类型、年份或标签，快速筛选高清影片内容。</p>
+    </div>
+  </section>
+  <section class="container search-panel-page">
+    <form class="filter-panel" data-search-form>
+      <label>
+        <span>关键词</span>
+        <input type="search" name="q" placeholder="片名、标签、简介">
+      </label>
+      <label>
+        <span>类型</span>
+        <select name="type">
+          <option value="">全部类型</option>
+          <option value="movie">热门电影</option><option value="series">连续剧集</option><option value="anime">动漫动画</option><option value="variety">综艺真人秀</option><option value="documentary">纪录片</option>
+        </select>
+      </label>
+      <label>
+        <span>地区</span>
+        <select name="region">
+          <option value="">全部地区</option>
+          <option value="mainland">大陆佳片</option><option value="hongkong">香港电影</option><option value="taiwan">台湾精选</option><option value="japan">日本片库</option><option value="korea">韩国热播</option><option value="america">美国电影</option><option value="uk">英国作品</option><option value="france">法国电影</option><option value="europe">欧洲口碑</option><option value="asia">亚洲精选</option><option value="other">多地区片单</option>
+        </select>
+      </label>
+      <label>
+        <span>年份</span>
+        <select name="year">
+          <option value="">全部年份</option>
+          <option value="2029">2029 年</option><option value="2028">2028 年</option><option value="2027">2027 年</option><option value="2026">2026 年</option><option value="2025">2025 年</option><option value="2024">2024 年</option><option value="2023">2023 年</option><option value="2022">2022 年</option><option value="classic">经典片库</option>
+        </select>
+      </label>
+      <label>
+        <span>题材</span>
+        <select name="genre">
+          <option value="">全部题材</option>
+          <option value="剧情">剧情</option><option value="悬疑">悬疑</option><option value="喜剧">喜剧</option><option value="爱情">爱情</option><option value="动作">动作</option><option value="奇幻">奇幻</option><option value="惊悚">惊悚</option><option value="犯罪">犯罪</option><option value="家庭">家庭</option><option value="科幻">科幻</option><option value="冒险">冒险</option><option value="历史">历史</option><option value="恐怖">恐怖</option><option value="古装">古装</option><option value="动画">动画</option><option value="战争">战争</option><option value="青春">青春</option><option value="传记">传记</option><option value="音乐">音乐</option><option value="灾难">灾难</option><option value="运动">运动</option><option value="武侠">武侠</option><option value="心理">心理</option><option value="情色">情色</option>
+        </select>
+      </label>
+      <button type="submit">筛选</button>
+    </form>
+    <div class="search-result-head">
+      <h2>筛选结果</h2>
+      <p data-result-note>输入条件后查看匹配影片</p>
+    </div>
+    <div class="movie-grid movie-grid--list" data-search-results></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand--footer" href="index.html">
+        <span class="brand__mark">影</span>
+        <span class="brand__name">免费亚洲电影</span>
+      </a>
+      <p>整理免费亚洲电影栏目内容，涵盖多地区、多题材影片，页面分类清晰。</p>
+    </div>
+    <div>
+      <h2>精选入口</h2>
+      <a href="movies-page-1.html">热门片库</a>
+      <a href="categories.html">分类浏览</a>
+      <a href="ranking.html">口碑排行榜</a>
+      <a href="search.html">影片搜索</a>
+    </div>
+    <div>
+      <h2>地区推荐</h2>
+      <a href="cat-region-mainland.html">大陆佳片</a>
+      <a href="cat-region-japan.html">日韩精选</a>
+      <a href="cat-region-america.html">欧美口碑</a>
+      <a href="cat-year-2025.html">年度新片</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 免费亚洲电影. 精选影片内容持续更新。</div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
